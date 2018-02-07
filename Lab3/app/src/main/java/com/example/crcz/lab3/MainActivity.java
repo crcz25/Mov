@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     Context context;
 
     public void passData(View view, String userName){
-        String text = "Welcome " + userName;
+        String text = userName;
 
         Intent pass_data = new Intent(MainActivity.this, Main2Activity.class);
         pass_data.putExtra("data",text);
@@ -51,7 +51,20 @@ public class MainActivity extends AppCompatActivity {
                 if(ed1.getText().toString().equals("admin") && ed2.getText().toString().equals("admin")) {
                     Toast.makeText(getApplicationContext(), "Password OK!",Toast.LENGTH_SHORT).show();
                     passData(v, ed1.getText().toString());
-                }else{
+
+                    int NOTIF_ID = 1234;
+                    NotificationCompat.Builder NotifBuilder = new NotificationCompat.Builder(MainActivity.this);
+                    NotifBuilder.setSmallIcon(R.mipmap.ic_launcher);
+                    NotifBuilder.setContentTitle("Lab 3");
+                    NotifBuilder.setContentText("Logged In:- " + ed1.getText().toString());
+
+                    Intent notificationIntent = new Intent(MainActivity.this, Main2Activity.class);
+                    PendingIntent contentIntent = PendingIntent.getActivity(context, 0, notificationIntent, 0);
+                    NotifBuilder.setContentIntent(contentIntent);
+
+                    NotificationManager MyNotification = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                    MyNotification.notify(NOTIF_ID, NotifBuilder.build());
+                } else {
                     AlertDialog.Builder SecondDialogConf = new AlertDialog.Builder(MainActivity.this);
 
                     SecondDialogConf.setTitle("Confirmation Dialog");

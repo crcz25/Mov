@@ -21,8 +21,9 @@ public class Main2Activity extends AppCompatActivity {
 
         TextView myText = (TextView) findViewById(R.id.textView1);
         if(data.length() > 0){
-            myText.setText(data);
-
+            myText.setText("Welcome back:- "+data);
+        } else {
+            myText.setText("Wrong user!!");
         }
 
     }
