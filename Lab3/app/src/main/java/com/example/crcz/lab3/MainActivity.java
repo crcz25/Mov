@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         String text = userName;
 
         Intent pass_data = new Intent(MainActivity.this, Main2Activity.class);
-        pass_data.putExtra("data",text);
+        pass_data.putExtra("userName",text);
         startActivity(pass_data);
     }
 
