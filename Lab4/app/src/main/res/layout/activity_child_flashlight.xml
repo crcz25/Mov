@@ -4,40 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.crcz.lab4.MainActivity"
-    tools:layout_editor_absoluteY="81dp">
+    tools:context="com.example.crcz.lab4.ChildFlashlight">
 
     <Button
-        android:id="@+id/accButton"
+        android:id="@+id/buttonFlashLight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Accelerometer data"
-        app:layout_constraintBottom_toTopOf="@+id/gyroButton"
+        android:text="Turn On/Off flashlight"
+        app:layout_constraintBottom_toTopOf="@+id/backButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/gyroButton"
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gyroscope Data"
-        app:layout_constraintBottom_toTopOf="@+id/flashButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/accButton" />
-
-    <Button
-        android:id="@+id/flashButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Flashlight"
+        android:text="Go Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gyroButton" />
-
+        app:layout_constraintTop_toBottomOf="@+id/buttonFlashLight" />
 </android.support.constraint.ConstraintLayout>

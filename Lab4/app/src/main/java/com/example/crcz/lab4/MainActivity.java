@@ -36,5 +36,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
+        Button flashButton = findViewById(R.id.flashButton);
+        flashButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(MainActivity.this, ChildFlashlight.class);
+                        startActivity(intent);
+                    }
+                }
+        );
     }
 }
