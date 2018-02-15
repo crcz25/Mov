@@ -3,10 +3,7 @@ package com.example.crcz.lab4;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
-import android.hardware.Camera.Parameters;
 import android.media.MediaPlayer;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -29,37 +26,14 @@ public class ChildFlashlight extends AppCompatActivity {
 
         isFlashOn = false;
 
-        if (ContextCompat.checkSelfPermission(getApplicationContext(), android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.CAMERA}, 50);
-            Log.i("myTag", "SOLICITAR PERMISOS");
-            hasFlash = getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH);
-            if (!hasFlash){
-                Toast.makeText(ChildFlashlight.this, "Sorry, you device does not have any camera", Toast.LENGTH_LONG).show();
-                return;
-            } else {
-                Log.i("myTag", "OBTENIENDO CAMARA");
-                getCamera();
-            }
+        hasFlash = getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH);
+        if (!hasFlash){
+            Toast.makeText(ChildFlashlight.this, "Sorry, you device does not have any camera", Toast.LENGTH_LONG).show();
+            return;
         } else {
-            Log.i("myTag", "YA TIENE PERMISOS");
-            hasFlash = getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH);
-            if (!hasFlash){
-                Toast.makeText(ChildFlashlight.this, "Sorry, you device does not have any camera", Toast.LENGTH_LONG).show();
-                return;
-            } else {
-                Log.i("myTag", "OBTENIENDO CAMARA");
-                getCamera();
-            }
+            Log.i("myTag", "OBTENIENDO CAMARA");
+            getCamera();
         }
-//        hasFlash = getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH);
-//        if (!hasFlash){
-//            Toast.makeText(ChildFlashlight.this, "Sorry, you device does not have any camera", Toast.LENGTH_LONG).show();
-//            return;
-//        } else {
-//            Log.i("myTag", "OBTENIENDO CAMARA");
-//            getCamera();
-//        }
-
 
         flashButton.setOnClickListener(new View.OnClickListener() {
             @Override
