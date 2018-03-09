@@ -1,6 +1,5 @@
 ionic start myApp blank ­­type ionic1
 
-
 ionic cordova platform add android
 
 ionic cordova run android
