@@ -1,0 +1,18 @@
+<ion-view title="Page" id="page1">
+  <ion-content padding="true" class="has-header">
+    <form id="page-form2" class="list">
+      <label class="item item-input" id="page-input2">
+        <span class="input-label">Name</span>
+        <input type="text" ng-model="mdl.name" placeholder="Juan">
+      </label>
+      <label class="item item-input" id="page-input3">
+        <span class="input-label">Password</span>
+        <input type="text" ng-model="mdl.pass" placeholder="1234">
+      </label>
+    </form>
+    <a ui-sref="page2({
+      name: mdl.name,
+      pass: mdl.pass
+    })" id="page-button1" class="button button-positive button-block">Tap me!</a>
+  </ion-content>
+</ion-view>
