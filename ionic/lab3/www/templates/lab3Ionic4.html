@@ -1,0 +1,33 @@
+<ion-view title="Lab 3 Ionic" id="page5">
+  <ion-content padding="true" class="has-header">
+    <h4 id="lab3Ionic3-heading6" style="color:#000000;font-weight:400;text-align:center;">Contact Info</h4>
+    <form id="lab3Ionic4-form11" class="list">
+      <div class="item item-divider">
+        Clientside, Input Value: {{ mdl.name +"+"+ mdl.phone }}
+      </div>
+      <label class="item item-input" id="lab3Ionic4-input7">
+        <span class="input-label">Name</span>
+        <input type="text" placeholder="Juan Perez" ng-model='mdl.name'>
+      </label>
+      <label class="item item-input" id="lab3Ionic4-input9">
+        <span class="input-label">email</span>
+        <input type="text" placeholder="holi@crayoli.com" ng-model='mdl.email'>
+      </label>
+      <label class="item item-input" id="lab3Ionic4-input8">
+        <span class="input-label">Phone</span>
+        <input type="number" placeholder="4425896547" ng-model="mdl.phone">
+      </label>
+    </form>
+    <a ui-sref="answers({
+      option: option,
+      check1: check1,
+      check2: check2,
+      check3: check3,
+      check4: check4,
+      comment: comment,
+      name: mdl.name,
+      email: mdl.email,
+      phone: mdl.phone
+    })" id="lab3Ionic4-button4" class="button button-positive button-block">Finish</a>
+  </ion-content>
+</ion-view>

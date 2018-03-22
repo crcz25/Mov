@@ -1,0 +1,20 @@
+<ion-view title="Lab 3 Ionic" id="page1">
+  <ion-content padding="true" class="has-header">
+    <h4 id="lab3Ionic-heading3" style="color:#000000;font-weight:400;text-align:center;">The meal I ordered was ...</h4>
+    <form id="lab3Ionic-form6" class="list">
+      <icon-list  radio-group>
+        <div class="item item-divider">
+          Clientside, Selected Value: {{ mdl.option }}
+        </div>
+          <ion-radio id="lab3Ionic-radio3" ng-model="mdl.option" value='excelent'>Excellent</ion-radio>
+          <ion-radio id="lab3Ionic-radio4" ng-model="mdl.option" value='Good'>Good</ion-radio>
+          <ion-radio id="lab3Ionic-radio5" value='regular' ng-model="mdl.option">Regular</ion-radio>
+          <ion-radio id="lab3Ionic-radio6" value='bad' ng-model="mdl.option">Bad</ion-radio>
+          <ion-radio id="lab3Ionic-radio7" value='awful' ng-model="mdl.option">Awful</ion-radio>
+      </icon-list>
+    </form>
+    <a ui-sref="lab3Ionic2({
+      option: mdl.option,
+    })" id="lab3Ionic-button1" class="button button-positive button-block">Next</a>
+  </ion-content>
+</ion-view>

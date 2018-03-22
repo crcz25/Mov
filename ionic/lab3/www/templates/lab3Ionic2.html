@@ -1,0 +1,21 @@
+<ion-view title="Lab 3 Ionic" id="page3">
+  <ion-content padding="true" class="has-header">
+    <h4 id="lab3Ionic2-heading5" style="color:#000000;font-weight:400;text-align:center;">The meal I ordered included ...</h4>
+    <form id="lab3Ionic2-form7" class="list">
+      <div class="item item-divider">
+        Clientside, Selected Value: {{ mdl.check1 +"+"+ mdl.check2 +"+"+ mdl.check3 +"+"+ mdl.check4 }}
+      </div>
+      <ion-checkbox id="lab3Ionic2-checkbox7" ng-model="mdl.check1">Starter</ion-checkbox>
+      <ion-checkbox id="lab3Ionic2-checkbox8" ng-model="mdl.check2">First course</ion-checkbox>
+      <ion-checkbox id="lab3Ionic2-checkbox9" ng-model="mdl.check3">Main dish</ion-checkbox>
+      <ion-checkbox id="lab3Ionic2-checkbox10" ng-model="mdl.check4">Dessert</ion-checkbox>
+    </form>
+    <a ui-sref="lab3Ionic3({
+      option: option,
+      check1: mdl.check1,
+      check2: mdl.check2,
+      check3: mdl.check3,
+      check4: mdl.check4
+    })" id="lab3Ionic2-button2" class="button button-positive button-block">Next</a>
+  </ion-content>
+</ion-view>
