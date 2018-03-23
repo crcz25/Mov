@@ -1,0 +1,56 @@
+<ion-view title="Answers" id="page6">
+  <ion-content padding="true" class="has-header container" style="padding-left:20%; padding-right:20%;">
+    <h4 id="answers-heading1" >The meal I ordered was:</h4>
+    <div id="answers-markdown2" class="show-list-numbers-and-dots">
+      <ul>
+        <li>
+          <p >{{option ? option : 'NA'}}</p>
+        </li>
+      </ul>
+    </div>
+    <h4 id="answers-heading2" >The meal I ordered included:</h4>
+    <div id="answers-markdown3" class="show-list-numbers-and-dots">
+      <p >
+        <ul>
+          <li ng-if="check1 == true">
+            Starter
+          </li>
+          <li ng-if="check2 == true">
+            First course
+          </li>
+          <li ng-if="check3 == true">
+            Main dish
+          </li>
+          <li ng-if="check4 == true">
+            Dessert
+          </li>
+          <li ng-if="!check4 && !check1 && !check2 && !check3">
+            NA
+          </li>
+        </ul>
+      </p>
+    </div>
+    <h4 id="answers-heading3" >Comments</h4>
+    <div id="answers-markdown4" class="show-list-numbers-and-dots">
+      <ul>
+        <li>
+          <p >{{comment ? comment: 'NA'}}</p>
+        </li>
+      </ul>
+    </div>
+    <h4 id="answers-heading4" >Contact Info</h4>
+    <div id="answers-markdown5" class="show-list-numbers-and-dots">
+      <ul>
+        <li>
+          <p>Name: {{name ? name : "NA" }}</p>
+        </li>
+        <li>
+          <p >Phone: {{phone ? phone : "NA"}}</p>
+        </li>
+        <li>
+          <p >Email: {{email ? email : "NA"}}</p>
+        </li>
+      </ul>
+    </div>
+  </ion-content>
+</ion-view>

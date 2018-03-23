@@ -3,3 +3,10 @@ ionic start myApp blank ­­type ionic1
 ionic cordova platform add android
 
 ionic cordova run android
+
+ionic cordova plugin add cordova-plugin-vibration --save
+ionic cordova plugin add cordova-plugin-x-toast --save
+ionic cordova plugin add cordova-plugin-dialogs --save
+ionic cordova plugin add cordova-plugin-dialogs --save
+ionic cordova plugin add cordova-plugin-flashlight --save
+ionic cordova plugin add cordova-plugin-camera --save

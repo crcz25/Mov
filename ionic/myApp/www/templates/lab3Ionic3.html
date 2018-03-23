@@ -1,0 +1,20 @@
+<ion-view title="Lab 3 Ionic" id="page4">
+  <ion-content padding="true" class="has-header">
+    <h4 id="lab3Ionic3-heading6" style="color:#000000;font-weight:400;text-align:center;">Add your comments</h4>
+    <form id="lab3Ionic3-form9" class="list">
+      <div class="item item-divider">
+        Clientside, Input Value: {{ mdl.comment }}
+      </div>
+      <label class="item item-input" id="lab3Ionic3-textarea1">
+        <span class="input-label">Comments</span><textarea placeholder="Add comment please...." ng-model="mdl.comment"></textarea></label>
+    </form>
+    <a ui-sref="lab3Ionic4({
+      option: option,
+      check1: check1,
+      check2: check2,
+      check3: check3,
+      check4: check4,
+      comment: mdl.comment
+    })" id="lab3Ionic3-button3" class="button button-positive button-block">Next</a>
+  </ion-content>
+</ion-view>
