@@ -1,0 +1,15 @@
+<ion-view title="Weather App" id="page8">
+  <ion-content padding="true" class="has-header">
+    <h2 id="weatherApp-heading8" style="color:#000000;">Write your city</h2>
+    <form id="weatherApp-form10" class="list">
+      <label class="item item-input" id="weatherApp-input9" name="city">
+        <span class="input-label">City</span>
+        <input type="text" placeholder="Queretaro" ng-model="mdl.city">
+      </label>
+    </form>
+
+    <a ui-sref="stats({
+      city: mdl.city
+    })" id="weatherApp-button5" class="button button-royal button-block">Get Data</a> 
+  </ion-content>
+</ion-view>
