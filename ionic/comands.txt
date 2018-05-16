@@ -4,6 +4,8 @@ ionic cordova platform add android
 
 ionic cordova run android
 
+ionic serve
+
 ionic cordova plugin add cordova-plugin-vibration --save
 ionic cordova plugin add cordova-plugin-x-toast --save
 ionic cordova plugin add cordova-plugin-dialogs --save

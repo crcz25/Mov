@@ -1,0 +1,37 @@
+<ion-view title="Page" id="page1">
+  <ion-content padding="true" class="has-header">
+    <h3 id="page-heading1" style="color:#000000;">Due</h3>
+    <form id="page-form1" class="list">
+      <label class="item item-input" id="page-input1">
+        <span class="input-label">Input</span>
+        <input type="text" placeholder="" ng-model="mdl.due">
+      </label>
+      <h3 id="page-heading2" style="color:#000000;">Paid</h3>
+      <label class="item item-input" id="page-input2">
+        <span class="input-label">{{ less ? less : Input}}</span>
+        <input type="text" placeholder="" ng-model="mdl.paid">
+      </label>
+
+      {{ mdl.due }}
+      {{ mdl.paid }}
+
+      <button id="page-button1" class="button button-positive button-block" ng-click="getMoney()">Calculate</button>
+      <button id="page-button1" class="button button-positive button-block" ng-click="reset()">reset</button>
+      <h4 id="page-heading3" style="color:#000000;">Exchange</h4>
+      <ul>
+        <li>500 {{ quinientos }}</li>
+        <li>200 {{ doscientos }}</li>
+        <li>100 {{ cien }}</li>
+        <li>50 {{ cincuenta }}</li>
+        <li>20 {{ veint }}</li>
+        <li>10 {{ diez }}</li>
+        <li>5 {{ cinco }}</li>
+        <li>2 {{ dos }}</li>
+        <li>1 {{ uno }}</li>
+      </ul>
+      <!-- <ion-list>
+          <ion-item *ngFor="let d of denominations"> total {{ d }}</ion-item>
+      </ion-list> -->
+    </form>
+  </ion-content>
+</ion-view>
